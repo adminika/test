@@ -1,0 +1,59 @@
+.project {
+	overflow: hidden;
+	&__header {
+		background-color: #232347;
+	}
+	&__container {
+		max-width: 1770px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+	}
+	&__title {
+		font-family: 'Montserrat';
+		font-size: 30px;
+		font-weight: 800;
+		color: #ffffff;
+		text-transform: uppercase;
+		padding: rem(100) 0;
+	}
+}
+
+.project {
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid #9bafd9;
+	}
+}
+
+.card__inner {
+	padding: rem(60) rem(25) 0 rem(90);
+	margin-bottom: rem(65);
+}
+.card {
+	&__title {
+		font-family: 'Montserrat';
+		font-size: 30px;
+		font-weight: 800;
+		color: #151d3d;
+		text-transform: uppercase;
+		margin-bottom: rem(30);
+	}
+	&__text {
+		font-family: 'Roboto';
+		font-size: 16px;
+		color: #000000;
+		line-height: 26px;
+	}
+	&__img {
+		max-width: 480px;
+		width: 100%;
+		margin-top: auto;
+	}
+}
+

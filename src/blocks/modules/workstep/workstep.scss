@@ -1,0 +1,107 @@
+.workstep {
+	width: 100%;
+	background-image: url(../img/workstep.jpg);
+  background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: rem(100); 
+	padding-bottom: rem(200); 
+	&__container {
+		max-width: 1550px;
+		margin: 0 auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title {
+		font-family: 'Montserrat';
+		font-size: 30px;
+		font-weight: 800;
+		color: #151d3d;
+		text-transform: uppercase;
+		margin-bottom: rem(90);
+	}
+	&__body {
+		margin-bottom: rem(200);
+	}
+}
+
+.hexagon {
+  position: relative;
+  display: inline-block;
+  /* left/right margin approx. 25% of .hexagon width + spacing */
+  margin: 1px 50px;
+  border-top: 3px solid rgba(59, 79, 153, 0.93);
+  border-bottom: 3px solid rgba(59, 79, 153, 0.93);
+  background-color: transparent;
+  text-align: center;
+}
+.hexagon, .hexagon::before, .hexagon::after {
+  /* easy way: height is width * 1.732
+  actual formula is 2*(width/(2*Math.tan(Math.PI/6)))
+  remove border-radius for sharp corners on hexagons */
+  width: 195px;
+  height: 337.74px;
+  border-radius: 10%/3%;
+
+}
+.hexagon::before {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(-60deg);
+  border-top: 3px solid rgba(59, 79, 153, 0.93);
+  border-bottom: 3px solid rgba(59, 79, 153, 0.93);
+}
+.hexagon::after {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(60deg);
+  border-top: 3px solid rgba(59, 79, 153, 0.93);
+  border-bottom: 3px solid rgba(59, 79, 153, 0.93);
+}
+.hexagon:nth-child(even) {
+  /* top approx. 50% of .hexagon height + spacing */
+  top: 173px;
+}
+.hexagon:hover {
+  background-color: rgba(59, 79, 153, 1);
+  cursor: pointer;
+  z-index: 105;
+
+  .hexagontent span, .hexagontent p{
+  	color: #fff;
+  }
+}
+
+.hexagontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  z-index: 100;
+
+  span {
+  	font-family: 'Roboto';
+		font-size: 100px;
+		font-weight: 900;
+		color: rgba(59, 79, 153, 1);
+  }
+
+  p {
+  	font-family: 'Roboto';
+		font-size: 16px;
+		font-weight: 500;
+		color: rgba(21, 29, 61, 1);
+		text-align: center;
+  }
+}

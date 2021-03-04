@@ -1,0 +1,161 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background: rgb(21, 29, 61);
+  background: linear-gradient(90deg, rgba(21, 29, 61, 1) 0%, rgba(20, 28, 60, 0.8) 100%);
+
+  &__container {
+    max-width: 1770px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    font-family: "GothamPro";
+    font-weight: 500;
+  }
+
+  &__logo {}
+
+  &__burger {}
+
+  &__nav {
+    margin-left: rem(30);
+  }
+}
+
+.logo {}
+
+.burger {
+  width: 39px;
+  height: 4px;
+  background-color: #fff;
+  margin-left: rem(45);
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 39px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 14px;
+    left: 8px;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    width: 39px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 14px;
+    right: 8px;
+  }
+}
+
+.top {}
+
+.middle {}
+
+.bottom {}
+
+.menu {
+  &__list {
+    list-style-type: none;
+    display: flex;
+  }
+}
+
+.list {
+  &__item {
+    margin-left: rem(19);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.item {
+  &__link {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $secondary-color;
+      border-bottom-color: $secondary-color;
+    }
+
+    &--active {
+      color: $secondary-color;
+      border-bottom-color: $secondary-color;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  &__email {
+    &:hover {
+      a {
+        color: $secondary-color;
+      }
+
+      .email__icon {
+        fill: $secondary-color;
+      }
+    }
+  }
+
+  &__phone {
+    &:hover {
+      a {
+        color: $secondary-color;
+      }
+
+      .phone__icon {
+        fill: $secondary-color;
+      }
+    }
+  }
+}
+
+.contacts div:last-child {
+  margin-left: 60px;
+}
+
+.email,
+.phone {
+  position: relative;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    position: absolute;
+    top: -2px;
+    left: -30px;
+  }
+
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}

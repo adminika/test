@@ -1,0 +1,104 @@
+.reviews {
+	width: 100%;
+	background-image: url(../img/workstep.jpg);
+  background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: rem(100);
+	padding-bottom: rem(275);
+	&__container {
+		max-width: 1600px;
+		margin: 0 auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	&__body {
+		color: rgba(21, 29, 61, 1);
+		text-align: center;
+	}
+	&__title {
+		font-family: 'Montserrat';
+		font-size: 30px;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: rem(140);
+	}
+}
+
+// Slider
+
+.slider-container {
+	max-width: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.slider-track {
+	display: flex;
+	max-width: 1000px;
+	margin: 0 auto;
+	transition: 0.2s;
+}
+
+.slider-item {
+	display: flex;
+	max-height: 540px;
+}
+
+.img-wrapper img{
+	object-fit: cover;
+  width: 100%;
+  height: 540px;
+}
+
+.text-wrapper {
+	text-align: left;
+	align-self: center;
+	max-width: 555px;
+	margin-left: rem(125); 
+
+	h3 {
+		font-family: 'Montserrat';
+		font-size: 30px;
+		font-weight: 800;
+		color: rgba(21, 29, 61, 1);
+		text-transform: uppercase;
+		margin-bottom: rem(50);
+	}
+
+	p {
+		font-family: 'Gotham Pro';
+		font-size: 16px;
+		color: rgba(21, 29, 61, 1);
+		letter-spacing: 0.03em;
+		line-height: 26px;
+	}
+}
+
+.btn-prev, .btn-next{
+	font-weight: bold;
+    font-size: 36px;
+	text-align: center;
+	color: rgba(21, 29, 61, 1);
+	border-radius: 3px;
+	padding: 5px;
+	margin-top: -22px;
+	cursor: pointer;
+	position: absolute;
+	z-index: 99;
+
+	&:hover {
+		color: #fff;
+		background-color: rgba(21, 29, 61, 0.8);
+	}
+}
+
+.btn-prev {
+	top: 50%;
+	left: 0;
+}
+
+.btn-next {
+	top: 50%;
+	right: 0;
+}
